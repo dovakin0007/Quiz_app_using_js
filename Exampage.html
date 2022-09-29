@@ -1,0 +1,42 @@
+<html>
+
+<head>
+    <title>Quiz Module</title>
+    <link rel="stylesheet" type="text/css" href="./styles.css" />
+</head>
+
+<body onload="shouldLoad()">
+    <h1 class="quiz-heading">Quiz</h1>
+    <div class="countDown">
+        <p id="countDown" class="countDown2" style="display:block;">0:00</p>
+    </div>
+    <div id="X" class="app-body" style="display:none">
+        <h1 class="answer-key">Answer Key</h1>
+        <div class="question-card">
+
+            <h2 id='question'>Question</h2>
+
+            <input type="radio" id="op1" name="op" value="0">
+            <label for="op1" id="ans1">op1</label><br>
+            <input type="radio" id="op2" name="op" value="1">
+            <label for="op2" id="ans2">op2</label><br>
+            <input type="radio" id="op3" name="op" value="2">
+            <label for="op3" id="ans3">op3</label><br>
+            <input type="radio" id="op4" name="op" value="3">
+            <label for="op4" id="ans4">op4</label><br>
+            <input type="submit" name="submit" value='Submit' class="submit" onclick="checkAnswer()" />
+            <input type="submit" name="submit" value='Previous' class="submit" onclick="previous()" />
+
+        </div>
+
+    </div>
+    <button class="btn" id="startstop" value="Start" onclick=changeTest()>Start</button>
+    <div class="score" id="scr" style="display:none">
+        <p id="s">Score</p>
+
+    </div>
+
+    <script src="./index.js "></script>
+</body>
+
+</html>
